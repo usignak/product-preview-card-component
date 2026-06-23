@@ -26,18 +26,17 @@ body {
   border-radius: 10px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
 }
 
 .card-image {
-  width: 50%;
-  background: url("../images/image-product-desktop.jpg") no-repeat top/cover;
+  background: url("../images/image-product-mobile.jpg") no-repeat center/cover;
   border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  aspect-ratio: 16 / 10;
+  border-top-right-radius: 10px;
+  aspect-ratio: 1;
 }
 
 .card-text {
-  width: 50%;
   padding: 30px;
 }
 
@@ -99,7 +98,7 @@ body {
   background-color: hsl(158, 42%, 18%);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 620px) {
   body {
     height: 100vh;
     padding: 0;
@@ -108,5 +107,18 @@ body {
     justify-content: center;
   }
 
+  .card {
+    flex-direction: row;
+  }
 
+  .card-image {
+    width: 50%;
+    background: url("../images/image-product-desktop.jpg") no-repeat top/cover;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+  }
+
+  .card-text {
+    width: 50%;
+  }
 }
